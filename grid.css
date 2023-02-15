@@ -1,0 +1,43 @@
+.container{
+    display: grid;
+	grid-column: 1fr 1fr 1fr;
+	grid-template-areas: 
+	"header header header"
+	"aside main main"
+	"footer footer footer"
+	;
+}
+header {
+	display: grid;
+    place-content: center;
+	grid-area: header;
+}
+main {
+
+	grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+main article:nth-child(3n + 3) {
+
+grid-column: 1/-1;
+
+}
+
+aside {
+	
+	grid-area: aside;
+    display: grid;
+grid-auto-rows: 0.5fr 1fr 0.5fr;
+row-gap: 1rem;
+
+
+}
+footer {
+	grid-area: footer;
+    display: grid;
+    place-content: center;
+
+}
